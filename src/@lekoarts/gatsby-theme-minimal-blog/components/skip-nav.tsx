@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
+import { jsx } from 'theme-ui';
+import React from 'react';
 
 type SkipNavLinkProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 const skipNavStyles = {
   border: 0,
@@ -15,7 +15,7 @@ const skipNavStyles = {
   padding: 0,
   overflow: `hidden`,
   position: `absolute`,
-  "&:focus": {
+  '&:focus': {
     padding: 3,
     position: `fixed`,
     top: `15px`,
@@ -28,12 +28,12 @@ const skipNavStyles = {
     clip: `auto`,
     textDecoration: `none`,
   },
-}
+};
 
 const SkipNavLink = ({ children, ...props }: SkipNavLinkProps) => (
   <a {...props} sx={{ ...skipNavStyles }} href="#skip-nav" data-skip-link="true">
     {children}
   </a>
-)
+);
 
-export default SkipNavLink
+export default SkipNavLink;

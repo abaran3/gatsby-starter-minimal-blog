@@ -1,39 +1,39 @@
 /* eslint react/destructuring-assignment: 0 */
-import React from "react"
-import loadable from "@loadable/component"
-import theme from "prism-react-renderer/themes/nightOwl"
-import useSiteMetadata from "../hooks/use-site-metadata"
-import { HighlightInnerProps, Language } from "../types"
+import React from 'react';
+import loadable from '@loadable/component';
+import theme from 'prism-react-renderer/themes/nightOwl';
+import useSiteMetadata from '../hooks/use-site-metadata';
+import { HighlightInnerProps, Language } from '../types';
 
 type CodeProps = {
-  codeString: string
-  language: Language
-  noLineNumbers?: boolean
-  metastring?: string
-  [key: string]: any
-}
+  codeString: string;
+  language: Language;
+  noLineNumbers?: boolean;
+  metastring?: string;
+  [key: string]: any;
+};
 
 const LazyHighlight = loadable(async () => {
-  const Module = await import(`prism-react-renderer`)
-  const Highlight = Module.default
-  const { defaultProps } = Module
-  return (props: any) => <Highlight {...defaultProps} {...props} />
-})
+  const Module = await import(`prism-react-renderer`);
+  const Highlight = Module.default;
+  const { defaultProps } = Module;
+  return (props: any) => <Highlight {...defaultProps} {...props} />;
+});
 
 const LazyLiveProvider = loadable(async () => {
-  const Module = await import(`react-live`)
-  const { LiveProvider, LiveEditor, LiveError, LivePreview } = Module
+  const Module = await import(`react-live`);
+  const { LiveProvider, LiveEditor, LiveError, LivePreview } = Module;
   return (props: any) => (
     <LiveProvider {...props}>
       <LiveEditor data-name="live-editor" />
       <LiveError />
       <LivePreview data-name="live-preview" />
     </LiveProvider>
-  )
-})
+  );
+});
 
 function getParams(className = ``) {
-  const [lang = ``, params = ``] = className.split(`:`)
+  const [lang = ``, params = ``] = className.split(`:`);
 
   return [
     // @ts-ignore
@@ -45,31 +45,31 @@ function getParams(className = ``) {
   ].concat(
     // @ts-ignore
     params.split(`&`).reduce((merged, param) => {
-      const [key, value] = param.split(`=`)
+      const [key, value] = param.split(`=`);
       // @ts-ignore
-      merged[key] = value
-      return merged
-    }, {})
-  )
+      merged[key] = value;
+      return merged;
+    }, {}),
+  );
 }
 
-const RE = /{([\d,-]+)}/
+const RE = /{([\d,-]+)}/;
 
 const calculateLinesToHighlight = (meta: string) => {
   if (!RE.test(meta)) {
-    return () => false
+    return () => false;
   }
   const lineNumbers = RE.exec(meta)![1]
     .split(`,`)
-    .map(v => v.split(`-`).map(x => parseInt(x, 10)))
+    .map(v => v.split(`-`).map(x => parseInt(x, 10)));
   return (index: number) => {
-    const lineNumber = index + 1
+    const lineNumber = index + 1;
     const inRange = lineNumbers.some(([start, end]) =>
-      end ? lineNumber >= start && lineNumber <= end : lineNumber === start
-    )
-    return inRange
-  }
-}
+      end ? lineNumber >= start && lineNumber <= end : lineNumber === start,
+    );
+    return inRange;
+  };
+};
 
 const Code = ({
   codeString,
@@ -78,15 +78,15 @@ const Code = ({
   metastring = ``,
   ...props
 }: CodeProps) => {
-  const { showLineNumbers } = useSiteMetadata()
+  const { showLineNumbers } = useSiteMetadata();
 
-  const [language, { title = `` }] = getParams(blockClassName)
-  const shouldHighlightLine = calculateLinesToHighlight(metastring)
+  const [language, { title = `` }] = getParams(blockClassName);
+  const shouldHighlightLine = calculateLinesToHighlight(metastring);
 
-  const hasLineNumbers = !noLineNumbers && language !== `noLineNumbers` && showLineNumbers
+  const hasLineNumbers = !noLineNumbers && language !== `noLineNumbers` && showLineNumbers;
 
   if (props[`react-live`]) {
-    return <LazyLiveProvider code={codeString} noInline theme={theme} />
+    return <LazyLiveProvider code={codeString} noInline theme={theme} />;
   }
   return (
     <LazyHighlight code={codeString} language={language} theme={theme}>
@@ -100,10 +100,10 @@ const Code = ({
           <div className="gatsby-highlight" data-language={language}>
             <pre className={className} style={style} data-linenumber={hasLineNumbers}>
               {tokens.map((line, i) => {
-                const lineProps = getLineProps({ line, key: i })
+                const lineProps = getLineProps({ line, key: i });
 
                 if (shouldHighlightLine(i)) {
-                  lineProps.className = `${lineProps.className} highlight-line`
+                  lineProps.className = `${lineProps.className} highlight-line`;
                 }
 
                 return (
@@ -113,14 +113,14 @@ const Code = ({
                       <span {...getTokenProps({ token, key })} />
                     ))}
                   </div>
-                )
+                );
               })}
             </pre>
           </div>
         </React.Fragment>
       )}
     </LazyHighlight>
-  )
-}
+  );
+};
 
-export default Code
+export default Code;

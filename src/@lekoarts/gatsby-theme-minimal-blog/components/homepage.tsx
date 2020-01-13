@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import { Link } from "gatsby";
-import Layout from "./layout";
-import Hero from "../texts/hero";
-import Bottom from "../texts/bottom";
-import Title from "./title";
-import Listing from "./listing";
-import List from "./list";
-import useSiteMetadata from "../hooks/use-site-metadata";
-import replaceSlashes from "../utils/replaceSlashes";
+import { jsx } from 'theme-ui';
+import { Link } from 'gatsby';
+import Layout from './layout';
+import Hero from '../texts/hero';
+import Bottom from '../texts/bottom';
+import Title from './title';
+import Listing from './listing';
+import List from './list';
+import useSiteMetadata from '../hooks/use-site-metadata';
+import replaceSlashes from '../utils/replaceSlashes';
 
 type PostsProps = {
   posts: {
@@ -31,9 +31,7 @@ const Homepage = ({ posts }: PostsProps) => {
         <Hero />
       </section>
       <Title text="Latest Posts">
-        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>
-          Read all posts
-        </Link>
+        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
       </Title>
       <Listing posts={posts} showTags={false} />
       <List>

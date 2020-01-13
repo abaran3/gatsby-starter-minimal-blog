@@ -1,27 +1,27 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby';
 
 type Props = {
   site: {
     siteMetadata: {
-      siteTitle: string
-      siteTitleAlt: string
-      siteHeadline: string
-      siteUrl: string
-      siteDescription: string
-      siteLanguage: string
-      siteImage: string
-      author: string
+      siteTitle: string;
+      siteTitleAlt: string;
+      siteHeadline: string;
+      siteUrl: string;
+      siteDescription: string;
+      siteLanguage: string;
+      siteImage: string;
+      author: string;
       externalLinks: {
-        name: string
-        url: string
-      }[]
-      tagsPath: string
-      basePath: string
-      blogPath: string
-      showLineNumbers: boolean
-    }
-  }
-}
+        name: string;
+        url: string;
+      }[];
+      tagsPath: string;
+      basePath: string;
+      blogPath: string;
+      showLineNumbers: boolean;
+    };
+  };
+};
 
 const useSiteMetadata = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -47,9 +47,9 @@ const useSiteMetadata = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.site.siteMetadata
-}
+  return data.site.siteMetadata;
+};
 
-export default useSiteMetadata
+export default useSiteMetadata;

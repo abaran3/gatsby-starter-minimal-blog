@@ -1,4 +1,4 @@
-import { tailwind } from "@theme-ui/presets"
+import { tailwind } from '@theme-ui/presets';
 
 const headingStyles = {
   h1: {
@@ -35,7 +35,7 @@ const headingStyles = {
     fontSize: 1,
     mb: 2,
   },
-}
+};
 
 export default {
   ...tailwind,
@@ -75,16 +75,16 @@ export default {
       fontSize: [1, 1, 2],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
-      "--baseline-multiplier": 0.179,
-      "--x-height-multiplier": 0.35,
+      '--baseline-multiplier': 0.179,
+      '--x-height-multiplier': 0.35,
     },
     ul: {
       li: {
         fontSize: [1, 1, 2],
         letterSpacing: `-0.003em`,
         lineHeight: `body`,
-        "--baseline-multiplier": 0.179,
-        "--x-height-multiplier": 0.35,
+        '--baseline-multiplier': 0.179,
+        '--x-height-multiplier': 0.35,
       },
     },
     ol: {
@@ -92,8 +92,8 @@ export default {
         fontSize: [1, 1, 2],
         letterSpacing: `-0.003em`,
         lineHeight: `body`,
-        "--baseline-multiplier": 0.179,
-        "--x-height-multiplier": 0.35,
+        '--baseline-multiplier': 0.179,
+        '--x-height-multiplier': 0.35,
       },
     },
     ...headingStyles,
@@ -138,11 +138,11 @@ export default {
     secondary: {
       color: `secondary`,
       textDecoration: `none`,
-      ":hover": {
+      ':hover': {
         color: `heading`,
         textDecoration: `underline`,
       },
-      ":focus": {
+      ':focus': {
         color: `heading`,
       },
     },
@@ -151,4 +151,4 @@ export default {
       color: `text`,
     },
   },
-}
+};

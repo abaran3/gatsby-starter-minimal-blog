@@ -1,22 +1,22 @@
 /** @jsx jsx */
-import { jsx, useColorMode, Styled } from "theme-ui"
-import { Link } from "gatsby"
-import { Flex } from "@theme-ui/components"
-import useSiteMetadata from "../hooks/use-site-metadata"
-import ColorModeToggle from "./colormode-toggle"
-import useNavigation from "../hooks/use-navigation"
-import Navigation from "./navigation"
-import replaceSlashes from "../utils/replaceSlashes"
+import { jsx, useColorMode, Styled } from 'theme-ui';
+import { Link } from 'gatsby';
+import { Flex } from '@theme-ui/components';
+import useSiteMetadata from '../hooks/use-site-metadata';
+import ColorModeToggle from './colormode-toggle';
+import useNavigation from '../hooks/use-navigation';
+import Navigation from './navigation';
+import replaceSlashes from '../utils/replaceSlashes';
 
 const Header = () => {
-  const { siteTitle, externalLinks, basePath } = useSiteMetadata()
-  const nav = useNavigation()
-  const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === `dark`
+  const { siteTitle, externalLinks, basePath } = useSiteMetadata();
+  const nav = useNavigation();
+  const [colorMode, setColorMode] = useColorMode();
+  const isDark = colorMode === `dark`;
   const toggleColorMode = (e: any) => {
-    e.preventDefault()
-    setColorMode(isDark ? `light` : `dark`)
-  }
+    e.preventDefault();
+    setColorMode(isDark ? `light` : `dark`);
+  };
 
   return (
     <header sx={{ mb: [5, 6] }}>
@@ -39,12 +39,12 @@ const Header = () => {
           justifyContent: `space-between`,
           mt: 3,
           color: `secondary`,
-          a: { color: `secondary`, ":hover": { color: `heading` } },
+          a: { color: `secondary`, ':hover': { color: `heading` } },
           flexFlow: `wrap`,
         }}
       >
         <Navigation nav={nav} />
-        <div sx={{ "a:not(:first-of-type)": { ml: 3 }, fontSize: [1, `18px`] }}>
+        <div sx={{ 'a:not(:first-of-type)': { ml: 3 }, fontSize: [1, `18px`] }}>
           {externalLinks.map(link => (
             <Styled.a key={link.url} href={link.url}>
               {link.name}
@@ -53,7 +53,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

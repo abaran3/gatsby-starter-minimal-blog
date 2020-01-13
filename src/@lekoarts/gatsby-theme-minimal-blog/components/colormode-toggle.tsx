@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx } from 'theme-ui';
 
 type Props = {
-  isDark: boolean
-  toggle: (e: any) => void
-}
+  isDark: boolean;
+  toggle: (e: any) => void;
+};
 
-// Adapted from: https://codepen.io/aaroniker/pen/KGpXZo and https://github.com/narative/gatsby-theme-novela/blob/master/%40narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header.tsx
+// adapted from: https://codepen.io/aaroniker/pen/KGpXZo and https://github.com/narative/gatsby-theme-novela/blob/master/%40narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header.tsx
 
 const ColorModeToggle = ({ isDark, toggle }: Props) => (
   <button
@@ -30,7 +30,7 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
       cursor: `pointer`,
       padding: 0,
       appearance: `none`,
-      "&:hover, &:focus": { opacity: 1 },
+      '&:hover, &:focus': { opacity: 1 },
     }}
   >
     <div
@@ -45,7 +45,7 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
         transition: `all 0.45s ease`,
         overflow: isDark ? `visible` : `hidden`,
         boxShadow: t => (isDark ? `none` : `inset 8px -8px 0px 0px ${t.colors.toggleIcon}`),
-        "&:before": {
+        '&:before': {
           content: `""`,
           position: `absolute`,
           right: `-9px`,
@@ -58,7 +58,7 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
           opacity: isDark ? 0 : 1,
           transition: `transform 0.45s ease`,
         },
-        "&:after": {
+        '&:after': {
           content: `""`,
           width: `8px`,
           height: `8px`,
@@ -75,6 +75,6 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
       }}
     />
   </button>
-)
+);
 
-export default ColorModeToggle
+export default ColorModeToggle;

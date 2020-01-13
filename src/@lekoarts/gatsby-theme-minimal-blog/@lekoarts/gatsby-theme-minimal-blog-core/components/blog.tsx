@@ -1,15 +1,15 @@
-import React from "react"
-import Blog from "../../../components/blog"
+import React from 'react';
+import Blog from '../../../components/blog';
 
 type Props = {
   data: {
-    allPost: any
-    [key: string]: string
-  }
-}
+    allPost: any;
+    [key: string]: string;
+  };
+};
 
 export default ({ data }: Props) => {
-  const { allPost } = data
+  const { allPost } = data;
 
-  return <Blog posts={allPost.nodes} />
-}
+  return <Blog posts={allPost.nodes} />;
+};

@@ -1,15 +1,15 @@
-import React from "react"
-import Post from "../../../components/post"
+import React from 'react';
+import Post from '../../../components/post';
 
 type Props = {
   data: {
-    post: any
-    [key: string]: any
-  }
-}
+    post: any;
+    [key: string]: any;
+  };
+};
 
 export default ({ data }: Props) => {
-  const { post } = data
+  const { post } = data;
 
-  return <Post data={{ ...data, post }} />
-}
+  return <Post data={{ ...data, post }} />;
+};

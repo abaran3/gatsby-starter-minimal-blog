@@ -1,22 +1,22 @@
 /** @jsx jsx */
-import React from "react"
-import { jsx, Styled } from "theme-ui"
-import { Box } from "@theme-ui/components"
-import { Link } from "gatsby"
-import ItemTags from "./item-tags"
+import React from 'react';
+import { jsx, Styled } from 'theme-ui';
+import { Box } from '@theme-ui/components';
+import { Link } from 'gatsby';
+import ItemTags from './item-tags';
 
 type BlogListItemProps = {
   post: {
-    slug: string
-    title: string
-    date: string
+    slug: string;
+    title: string;
+    date: string;
     tags?: {
-      name: string
-      slug: string
-    }[]
-  }
-  showTags?: boolean
-}
+      name: string;
+      slug: string;
+    }[];
+  };
+  showTags?: boolean;
+};
 
 const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => (
   <Box mb={4}>
@@ -33,6 +33,6 @@ const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => (
       )}
     </p>
   </Box>
-)
+);
 
-export default BlogListItem
+export default BlogListItem;

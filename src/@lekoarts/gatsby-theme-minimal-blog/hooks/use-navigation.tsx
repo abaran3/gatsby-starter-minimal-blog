@@ -1,15 +1,15 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby';
 
 type Props = {
   site: {
     siteMetadata: {
       navigation: {
-        title: string
-        slug: string
-      }[]
-    }
-  }
-}
+        title: string;
+        slug: string;
+      }[];
+    };
+  };
+};
 
 const useNavigation = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -23,9 +23,9 @@ const useNavigation = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.site.siteMetadata.navigation
-}
+  return data.site.siteMetadata.navigation;
+};
 
-export default useNavigation
+export default useNavigation;

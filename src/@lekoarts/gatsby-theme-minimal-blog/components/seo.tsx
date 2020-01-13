@@ -1,6 +1,6 @@
-import React from "react"
-import Helmet from "react-helmet"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import React from 'react';
+import Helmet from 'react-helmet';
+import useSiteMetadata from '../hooks/use-site-metadata';
 
 const defaultProps = {
   title: ``,
@@ -8,18 +8,18 @@ const defaultProps = {
   pathname: false,
   image: false,
   children: null,
-}
+};
 
 type Props = {
-  title?: string
-  description?: string
-  pathname?: string
-  image?: string
-  children?: React.ReactNode
-}
+  title?: string;
+  description?: string;
+  pathname?: string;
+  image?: string;
+  children?: React.ReactNode;
+};
 
 const SEO = ({ title, description, pathname, image, children }: Props) => {
-  const site = useSiteMetadata()
+  const site = useSiteMetadata();
 
   const {
     siteTitle,
@@ -29,14 +29,14 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
     siteLanguage,
     siteImage: defaultImage,
     author,
-  } = site
+  } = site;
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,
-  }
+  };
   return (
     <Helmet title={title} defaultTitle={defaultTitle} titleTemplate={`%s | ${siteTitle}`}>
       <html lang={siteLanguage} />
@@ -61,9 +61,9 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       {children}
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;
 
-SEO.defaultProps = defaultProps
+SEO.defaultProps = defaultProps;

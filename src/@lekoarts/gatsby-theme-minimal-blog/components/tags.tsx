@@ -1,22 +1,22 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import { Box, Flex } from "@theme-ui/components"
-import kebabCase from "lodash.kebabcase"
-import { Link } from "gatsby"
-import Layout from "./layout"
-import useSiteMetadata from "../hooks/use-site-metadata"
-import SEO from "./seo"
-import replaceSlashes from "../utils/replaceSlashes"
+import { jsx, Styled } from 'theme-ui';
+import { Box, Flex } from '@theme-ui/components';
+import kebabCase from 'lodash.kebabcase';
+import { Link } from 'gatsby';
+import Layout from './layout';
+import useSiteMetadata from '../hooks/use-site-metadata';
+import SEO from './seo';
+import replaceSlashes from '../utils/replaceSlashes';
 
 type PostsProps = {
   list: {
-    fieldValue: string
-    totalCount: number
-  }[]
-}
+    fieldValue: string;
+    totalCount: number;
+  }[];
+};
 
 const Tags = ({ list }: PostsProps) => {
-  const { tagsPath, basePath } = useSiteMetadata()
+  const { tagsPath, basePath } = useSiteMetadata();
 
   return (
     <Layout>
@@ -36,7 +36,7 @@ const Tags = ({ list }: PostsProps) => {
         ))}
       </Box>
     </Layout>
-  )
-}
+  );
+};
 
-export default Tags
+export default Tags;

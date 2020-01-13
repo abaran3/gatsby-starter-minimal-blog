@@ -1,20 +1,20 @@
-import React from "react"
-import { Global } from "@emotion/core"
-import { Main, Styled, Container, css } from "theme-ui"
-import "typeface-ibm-plex-sans"
-import SEO from "./seo"
-import Header from "./header"
-import Footer from "./footer"
-import CodeStyles from "../styles/code"
-import SkipNavLink from "./skip-nav"
+import React from 'react';
+import { Global } from '@emotion/core';
+import { Main, Styled, Container, css } from 'theme-ui';
+import 'typeface-ibm-plex-sans';
+import SEO from './seo';
+import Header from './header';
+import Footer from './footer';
+import CodeStyles from '../styles/code';
+import SkipNavLink from './skip-nav';
 
-type LayoutProps = { children: React.ReactNode; className?: string }
+type LayoutProps = { children: React.ReactNode; className?: string };
 
 const Layout = ({ children, className }: LayoutProps) => (
   <Styled.root data-testid="theme-root">
     <Global
       styles={css({
-        "*": {
+        '*': {
           boxSizing: `inherit`,
         },
         body: {
@@ -23,7 +23,7 @@ const Layout = ({ children, className }: LayoutProps) => (
           boxSizing: `border-box`,
           textRendering: `optimizeLegibility`,
         },
-        "::selection": {
+        '::selection': {
           backgroundColor: `primary`,
           color: `white`,
         },
@@ -43,6 +43,6 @@ const Layout = ({ children, className }: LayoutProps) => (
       <Footer />
     </Container>
   </Styled.root>
-)
+);
 
-export default Layout
+export default Layout;
