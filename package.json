@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.8",
