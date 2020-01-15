@@ -1,10 +1,27 @@
 require(`dotenv`).config({
   path: `.env`,
-})
+});
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `Figureable Game`,
+    siteTitleAlt: `Figureable Game Blog - Documentation of research and development`,
+    siteHeadline: `Figureable Game Blog - Documentation of research and development`,
+    siteUrl: `https://figureable.netlify.com/`,
+    siteDescription: `A website/blog dedicated to the presentation of research findings and process documentation of the Figureable Game`,
+    siteLanguage: `en`,
+    siteImage: `/banner.jpg`,
+    author: `@JaePerris`,
+    externalLinks: [
+      {
+        name: `Twitter`,
+        url: `#`,
+      },
+      {
+        name: `Instagram`,
+        url: `#`,
+      },
+    ],
     navigation: [
       {
         title: `Blog`,
@@ -31,9 +48,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Figureable Game Blog - Documentation of research and development`,
+        short_name: `Figureable Game Blog`,
+        description: `A website/blog dedicated to the presentation of research findings and process documentation of the Figureable Game.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
@@ -56,4 +73,4 @@ module.exports = {
     `gatsby-plugin-netlify`,
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
   ],
-}
+};
