@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui';
 import useSiteMetadata from '../hooks/use-site-metadata';
+import logo from './logo.jpg';
 
 const Footer = () => {
   const { author } = useSiteMetadata();
@@ -16,7 +17,9 @@ const Footer = () => {
         a: {
           variant: `links.secondary`,
         },
-        flexDirection: [`column`, `column`, `row`],
+        // flexDirection: [`column`, `column`, `row`],
+        // flexDirection: 'row',
+        flexDirection: 'column',
         variant: `dividers.top`,
       }}
     >
@@ -24,7 +27,11 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} by {author}. All rights reserved.
       </div>
       <div>
-        <Styled.a
+        <a href="https://stimuleringsfonds.nl/en/">
+          <img src={logo} alt="Creative Industries Fund NL" width="25%" />
+        </a>
+
+        {/* <Styled.a
           aria-label="Link to the theme's GitHub repository"
           href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
         >
@@ -35,7 +42,7 @@ const Footer = () => {
         {` `}
         <Styled.a aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
           LekoArts
-        </Styled.a>
+        </Styled.a> */}
       </div>
     </footer>
   );
