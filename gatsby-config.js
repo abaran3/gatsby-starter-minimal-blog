@@ -14,8 +14,8 @@ module.exports = {
     author: `@JaePerris`,
     externalLinks: [
       {
-        name: `Twitter`,
-        url: `#`,
+        name: `GitHub`,
+        url: `https://github.com/tmf-code`,
       },
       {
         name: `Instagram`,
