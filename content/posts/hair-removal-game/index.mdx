@@ -6,12 +6,10 @@ tags:
   - Body
 ---
 
-import Gif from './gif';
-
-<Gif gifSrcURL="./pluck.gif" gifTitle="Pluck" />
-
-![Pluck](./pluck.gif)
-![Shave](./shave.gif)
-![Wax](./wax.gif)
-
 ![Hair lengths](./hair.png)
+
+import { CustomImage } from './CustomImage';
+
+<CustomImage src="./images/pluck.gif" title="Plucker" height="300px" />
+<CustomImage src="./images/shave.gif" title="Pluck" height="300px"/>
+<CustomImage src="./images/wax.gif" title="Pluck" height="300px"/>
