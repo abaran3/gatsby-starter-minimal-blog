@@ -1,0 +1,28 @@
+---
+title: Growing Hair
+date: 2020-03-06
+description: In this post we present our approach to growing hair programmatically.
+tags:
+  - Game Design
+  - Game Dynamic
+---
+
+Still working on our hair removal game idea, we wanted to explore ways in which we could implement a skin that continuously grows hair. We have elaborated on the [game concept](https://figureable.netlify.com/hair-removal-game) and some initial [storyboards](https://figureable.netlify.com/hair-removal-game-storyboarding) in previous posts.
+
+### hair-grower
+
+import { CustomImage } from './CustomImage';
+
+<CustomImage src="./images/hair-grower.jpg" title="Hair Grower" height="600px" />
+
+We made a webpage that grows hair using TypeScript and p5. Each hair is rendered as a quadrilateral which is thicker at one end and thins out as it reaches its pre-defined maximum length. This means that with relatively short length the hair appears to be ‘chopped off’ with a flat end, and with relatively long lengths its tip seems to be a point, like a hair that hasn’t been cut, or at least not for a while. The thicker end represents a hair’s root end, the thinner end the tip. These individual hairs are positioned based on grid coordinates with some jitter and drawn to fill the screen.
+
+Once the hairs were up and growing, we started playing around with mouse interactions. For now we have only added movement; hair within a certain radius of the mouse rotate in a randomized direction around their root. This had the effect of ruffling the hair, but would require more finesse and parameter tweaking to seem more realistic/ satisfying. One thing we noted is that generating touch-induced hair movement seemed to be a more difficult task than simulating a wind or breeze; at first, moving the mouse across the hair-filled page gave the impression of something like directing a blowing fan on the skin.
+
+### Future improvements
+
+For the time being we were happy with a simple prototype for a hair grower. From hereon though, attaining a desired or convincing hair aesthetic, animation and interaction would be another task. Elements that require fine-tuning are not limited to the movement, mentioned above, but also include things like the texture, shape, distribution, growth direction, growth rate, and more of the hair itself. Further research on real hair could inform our choices for suitable values for these parameters, as could a lot more design work.
+
+In a later phase we would be interested in exploring the details of hair removal techniques, and the ways in which these can best be simulated. What is, for instance, the length and amount of hair that a razor would cut off in one slide across the skin? How many hairs remain put, or break when ripping off a waxing strip? To further develop and implement our hair removal game idea, these are some of the situations that we would need to model and animate programmatically.
+
+Further still, we imagine that it would be fun if we could host patches of hair on a server, so that multiple different people can access the same ones and groom them together.
