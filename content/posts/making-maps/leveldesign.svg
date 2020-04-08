@@ -15,9 +15,9 @@
    viewBox="0 0 100 100"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 (fd57863, 2020-04-02)"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="leveldesign.svg"
-   inkscape:export-filename="/home/jae/floorplan_w_background.png"
+   inkscape:export-filename="C:\Users\User\Documents\bodygame\level_maps\object_w_startfinish.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -598,16 +598,16 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.99999999"
      inkscape:cx="847.58128"
-     inkscape:cy="658.46969"
+     inkscape:cy="738.46969"
      inkscape:document-units="px"
-     inkscape:current-layer="layer17"
+     inkscape:current-layer="layer18"
      showgrid="true"
      units="px"
      inkscape:pagecheckerboard="false"
-     inkscape:window-width="2490"
-     inkscape:window-height="1376"
-     inkscape:window-x="70"
-     inkscape:window-y="27"
+     inkscape:window-width="1920"
+     inkscape:window-height="1000"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -623,15 +623,30 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:groupmode="layer"
+     id="layer18"
+     inkscape:label="Background_nokey"
+     style="display:none">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.09259259px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 12.037036,-4.3999999e-7 H 86.111108 V 62.962961 H 12.037036 V -4.3999999e-7"
+       id="path5073"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\User\Documents\bodygame\level_maps\objects.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer17"
      inkscape:label="Background"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:inline">
     <rect
        style="opacity:1;fill:#fffefe;fill-opacity:1;stroke:none;stroke-width:0.09259259;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.55555554, 0.55555554;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect2365"
@@ -644,7 +659,8 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="Level_-1"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:none">
     <path
        style="fill:#a1a4c2;fill-opacity:1;stroke:none;stroke-width:0.09259259px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 22.22222,24.074072 -1.851851,-1.851852 5.555555,-5.555556 5.555555,5.555556 -5.555555,5.555555 -3.703704,-3.703703"
@@ -660,7 +676,8 @@
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="Level_-0.5"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:none">
     <path
        style="fill:#bad0d5;fill-opacity:1;stroke:none;stroke-width:0.09259259px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 25.925924,27.777775 5.555555,-5.555555 3.703703,3.703703 v 5.555556 h -5.555554 z"
@@ -671,7 +688,8 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Level_G"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:none">
     <path
        style="fill:#c7d5ba;fill-opacity:1;stroke:none;stroke-width:0.09259259px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 16.666665,7.4074048 31.481479,3.7037011 H 57.407405 L 72.222219,7.4074048 62.96296,16.666664 v 9.259259 H 53.7037 v 5.555556 3.703703 h 18.518519 v 3.703704 H 53.7037 V 57.407405 H 29.629628 V 38.888886 h 3.703703 v -3.703704 h -1.851852 l -1.851851,-1.851851 v -1.851852 h 5.555554 v -5.555556 z"
@@ -687,7 +705,8 @@
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="Level_1"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:none">
     <path
        style="fill:#da825e;fill-opacity:1;stroke:none;stroke-width:0.09259259px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 29.629628,37.037034 v 1.851852 h 3.703703 v -3.703704 h -1.851852 l -7.407407,-7.407407 v -3.703703 h -3.703703 v 3.703703 z"
@@ -776,7 +795,8 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Ramp"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:inline">
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09259259px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 31.481484,35.185184 h 1.851852 v 3.703704 h -3.703704 v -1.851852 l -9.25926,-9.25926 -2e-6,-3.703704 h 1.851852 1.851854 l -2e-6,1.851851 v 1.851852 z"
@@ -1209,7 +1229,8 @@
      inkscape:groupmode="layer"
      id="layer15"
      inkscape:label="Start_End"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:inline">
     <g
        id="g1796"
        style="stroke-width:0.18518519;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke">
@@ -1266,7 +1287,8 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Elevation"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:inline">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.09259259px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 66.666664,35.185182 V 22.22222 h 5.555555 v 12.962962 h -5.555555"
@@ -1277,7 +1299,7 @@
      inkscape:groupmode="layer"
      id="layer16"
      inkscape:label="Key"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <g
        id="g2303">
