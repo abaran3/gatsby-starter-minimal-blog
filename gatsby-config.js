@@ -2,6 +2,8 @@ require(`dotenv`).config({
   path: `.env`,
 });
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
   siteMetadata: {
     siteTitle: `Figureable Game`,
@@ -39,9 +41,12 @@ module.exports = {
       options: {},
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-goatcounter`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        // REQUIRED! https://[my_code].goatcounter.com
+        code: !isProduction ? '095914' : 'figureablegame',
+        head: true,
+        allowLocal: !isProduction,
       },
     },
     `gatsby-plugin-sitemap`,
