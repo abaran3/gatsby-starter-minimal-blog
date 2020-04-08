@@ -4,7 +4,7 @@ Found [here](https://figureable.netlify.com/)
 
 ## Available Tags
 
-*Thematic tags*
+_Thematic tags_
 
 Theory  
 Context  
@@ -12,11 +12,11 @@ Reflection
 Design Session  
 Game Concept  
 Game Narrative  
-Game Dynamic  
+Game Dynamic
 
-*Theoretical tags*
+_Theoretical tags_
 
 Body  
 Control  
 Movement  
-Environment  
+Environment
