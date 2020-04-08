@@ -4,7 +4,7 @@ Found [here](https://figureable.netlify.com/)
 
 ## Available Tags
 
-_Thematic tags_
+### Thematic tags
 
 Theory  
 Context  
@@ -14,7 +14,7 @@ Game Concept
 Game Narrative  
 Game Dynamic
 
-_Theoretical tags_
+### Theoretical tags
 
 Body  
 Control  
