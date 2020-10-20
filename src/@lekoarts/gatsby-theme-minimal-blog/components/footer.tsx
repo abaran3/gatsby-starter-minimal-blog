@@ -23,12 +23,13 @@ const Footer = () => {
         variant: `dividers.top`,
       }}
     >
+      <div>&copy; {new Date().getFullYear()}. Figureable Game.</div>
       <div>
-        &copy; {new Date().getFullYear()} by {author}. All rights reserved.
+        <p></p>
       </div>
       <div>
         <a href="https://stimuleringsfonds.nl/en/">
-          <img src={logo} alt="Creative Industries Fund NL" width="25%" />
+          <img src={logo} alt="Creative Industries Fund NL" width="220px" />
         </a>
 
         {/* <Styled.a
