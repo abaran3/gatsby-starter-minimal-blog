@@ -6,11 +6,11 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   siteMetadata: {
-    siteTitle: `Figureable Game`,
-    siteTitleAlt: `Figureable Game Blog - Documentation of research and development`,
-    siteHeadline: `Figureable Game Blog - Documentation of research and development`,
-    siteUrl: `https://figureable.netlify.com/`,
-    siteDescription: `A website/blog dedicated to the presentation of research findings and process documentation of the Figureable Game`,
+    siteTitle: `Figureable`,
+    siteTitleAlt: `Figureable Blog - Documentation of research and development`,
+    siteHeadline: `Figureable Blog - Documentation of research and development`,
+    siteUrl: `https://figureable.netlify.app/`,
+    siteDescription: `A website and blog dedicated to the presentation of research findings and process documentation of Figureable. Figureable is an artistic research project that explores our relationships to and with bodies through embodiment in games.`,
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
     author: `@JaePerris`,
@@ -53,9 +53,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Figureable Game Blog - Documentation of research and development`,
-        short_name: `Figureable Game Blog`,
-        description: `A website/blog dedicated to the presentation of research findings and process documentation of the Figureable Game.`,
+        name: `Figureable Blog - Documentation of research and development`,
+        short_name: `Figureable Blog`,
+        description: `A website and blog dedicated to the presentation of research findings and process documentation of Figureable. Figureable is an artistic research project that explores our relationships to and with bodies through embodiment in games.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,

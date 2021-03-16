@@ -23,7 +23,7 @@ const Footer = () => {
         variant: `dividers.top`,
       }}
     >
-      <div>&copy; {new Date().getFullYear()}. Figureable Game.</div>
+      <div>&copy; {new Date().getFullYear()}. Figureable.</div>
       <div>
         <p></p>
       </div>
