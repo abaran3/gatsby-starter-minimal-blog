@@ -1,0 +1,48 @@
+---
+title: WebXR or Unity
+date: 2021-03-17
+description: In this post we discuss our main motivations for working with WebXR.
+tags:
+  - Development
+  - Reflection
+---
+
+In preparation for our upcoming series of VR experiments, we’ve been weighing out which platform we’re best off using. The two options we’re considering are Unity or WebXR, and at the moment we’re leaning towards the second of these.
+
+### WebXR
+
+Sometime last year Mozilla launched their [WebXR API](https://immersiveweb.dev/), which allows you to develop and host VR and AR experiences on the web.
+
+We’ve explored and tested the parallel world of Mozilla Hubs through a number of festivals and own projects and it’s great to see XR environments becoming more accessible and getting more exposure. But we only recently discovered Mozilla’s WebXR API, which in many aspects pretty much gives you the flexibility of Unity, only without the luxury of a pre-existing physics system and most standard game development UI tools.
+
+So we’ve been trying to decide whether we’re better off sticking with the currently more standard approach to developing VR games and experiences using Unity, or whether we’re happy to go down the more experimental route of a web-integrated VR framework.
+
+### Accessibility of VR
+
+Going into this project we were somewhat wary of the limited accessibility of VR. Needing to download each standalone VR experience, dealing with headset compatibility or facing lacking processing power are all common barriers to VR projects. Not to mention that most people don’t have a headset at all (myself a few months ago included).
+
+Having the option to preview virtual spaces from a flat laptop or phone screen, and being able to enter them through your headset browser at the click of an ‘Enter VR’ button solves some of these limitations.
+
+The people behind WebXR qualify their [value for artistic experiences](https://github.com/immersive-web/webxr/blob/main/explainer.md#artistic-experiences) quite convincingly too:
+
+> VR provides an interesting canvas for artists looking to explore the possibilities of a new medium. Shorter, abstract, and highly experimental experiences are often poor fits for an app-store model, where the perceived overhead of downloading and installing a native executable may be disproportionate to the content delivered. The web’s transient nature makes these types of applications more appealing, since they provide a frictionless way of viewing the experience. Artists can also more easily attract people to the content and target the widest range of devices and platforms with a single code base.
+
+### Prototyping and Experimenting
+
+We’ve also noticed that the ease of integrating 3D virtual spaces into webpages makes the process of sharing or publishing VR sketches or unpolished experiments much easier. This is really just another dimension of better accessibility, but it is one that will influence our workflow throughout the development process, rather than “just” the shareability of our finished work.
+
+So far we’ve had a lot of fun with running small VR experiments in the browser locally and making and experiencing real-time changes in VR. No builds and compilation needed, which makes it fast and pretty seamless to work with.
+
+### Performance
+
+This might be one of the biggest limitations of the web — and one we might want to revisit as we get closer to a production-ready piece. It is sad if some people see your work running at 5FPS.
+
+For the time being though, we’d say that the ease of access and shareability of a web-based project outweighs the fact that we’ll have to take it easy on the number of polygons we jam into the scene. We’ve also noticed that despite being accessible to anybody with a link, many online XR projects do tend to list recommended (/minimum) requirements. This seems to be a good way to manage expectations.
+
+### Familiar framework
+
+For us as a team, working with web happens to be the more familiar framework. Jae especially, was excited to discover a React framework for WebXR ([react-xr](https://github.com/pmndrs/react-xr)), which allows us to make VR/AR apps with [react-three-fiber](https://github.com/pmndrs/react-three-fiber), meaning that we can use pretty much anything in [three.js](https://threejs.org/). Technically this means that we have some previous experience to work from — much more, at least, than we would in Unity and C#.
+
+### Online during covid
+
+And finally, the relevance of online integration (and of _improving_ online integration and experiences) is also a consideration worth mentioning in the covid context. For now we find it quite hard to imagine passing around a museum-owned headset at an exhibition to see a VR piece any time soon. So building with compatibility for upcoming online or hybrid events in mind seems important for the time being.
